@@ -1,0 +1,42 @@
+{
+ "mirror": {
+  "page": "https://commons.wikimedia.org/wiki/File:Dentist_Examining_Patient%E2%80%99s_Teeth_with_Dental_Mirror.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Jameswasswa"
+ },
+ "room": {
+  "page": "https://commons.wikimedia.org/wiki/File:Dental_treatment_room_featuring_equipment_and_a_chair_in_a_modern_clinic.jpg",
+  "license": "CC BY 2.0",
+  "artist": "Shixart1985"
+ },
+ "chair": {
+  "page": "https://commons.wikimedia.org/wiki/File:Dental_chair_in_a_dentist_clinic.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "IrfanDP"
+ },
+ "navy": {
+  "page": "https://commons.wikimedia.org/wiki/File:A_Navy_dentist_exames_a_patient_at_sea.jpg",
+  "license": "Public domain",
+  "artist": "Official U.S. Navy Page"
+ },
+ "brush": {
+  "page": "https://commons.wikimedia.org/wiki/File:Toothbrush%2C_Toothpaste%2C_Dental_Care_%28571741%29.jpg",
+  "license": "CC0",
+  "artist": "Steve Buissinne, South Africa"
+ },
+ "pano": {
+  "page": "https://commons.wikimedia.org/wiki/File:Pano-GH21101912.jpg",
+  "license": "CC0",
+  "artist": "Fastsmiles"
+ },
+ "nervous": {
+  "page": "https://commons.wikimedia.org/wiki/File:A_dentist_examining_the_teeth_of_a_nervous_patient%2C_with_ext_Wellcome_V0012113.jpg",
+  "license": "CC BY 4.0",
+  "artist": ""
+ },
+ "xrays": {
+  "page": "https://commons.wikimedia.org/wiki/File:Teeth%2C_Dentistry%2C_Endodontology%2C_Teeth_dental_X-rays%2C_Rostov-on-Don%2C_Russia.jpg",
+  "license": "CC BY 4.0",
+  "artist": "Vyacheslav Argenberg"
+ }
+}
