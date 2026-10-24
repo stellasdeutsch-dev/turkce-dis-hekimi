@@ -74,7 +74,7 @@ a{color:inherit}button{font:inherit;color:inherit}
 .hero .wm{position:absolute;left:50%;top:14px;translate:-50% 0;font-size:clamp(84px,26vw,330px)}
 .hero-stage{position:relative;height:min(122vw,540px);display:grid;justify-items:center;align-items:start;padding-top:6%}
 .mascot{position:relative;width:min(62vw,330px);z-index:3}
-.mascot svg{width:100%;height:auto;overflow:visible;filter:drop-shadow(0 40px 40px rgba(28,128,242,.35))}
+.mascot .mt{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 40px 40px rgba(28,128,242,.35))}
 .target{position:absolute;left:50%;top:62%;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.55);translate:-50% -50%;display:grid;place-items:center;z-index:4}
 .target::after{content:"";width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(28,128,242,.25)}
 .hlines{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
@@ -220,17 +220,17 @@ html:not(.gs) .story .sw{color:var(--dk)}
 .pain{background:linear-gradient(180deg,#EAF2FB,#DCE9F6);border-radius:36px;padding:26px 18px}
 .pain-g{display:grid;gap:24px}
 .meter{display:grid;gap:10px}
-.meter-n{display:flex;align-items:flex-end;gap:14px}
+.meter-n{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .meter-n b{font-family:Mont,sans-serif;font-weight:400;font-size:clamp(70px,18vw,120px);line-height:.85;letter-spacing:-.06em;color:var(--b);min-width:1.2ch}
 .meter-n span{font-size:16px;color:var(--g);padding-bottom:8px}
-.meter-n span strong{display:block;color:var(--dk);font-size:20px;font-family:Mont,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-.02em}
+.meter-n span strong{display:block;color:var(--dk);font-size:17px;font-family:Mont,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-.02em}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;cursor:pointer}
 input[type=range]::-webkit-slider-runnable-track{height:10px;border-radius:9px;background:linear-gradient(90deg,var(--b) var(--v,30%),#fff var(--v,30%))}
 input[type=range]::-moz-range-track{height:10px;border-radius:9px;background:#fff}
 input[type=range]::-moz-range-progress{height:10px;border-radius:9px;background:var(--b)}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:#fff;border:8px solid var(--dk);margin-top:-10px;box-shadow:0 6px 14px -4px rgba(0,0,0,.35)}
 input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:7px solid var(--dk)}
-.scale{display:flex;justify-content:space-between;font-size:11px;color:var(--g);text-transform:uppercase;letter-spacing:.06em}
+.scale{display:flex;justify-content:space-between;font-size:9.5px;color:var(--g);text-transform:uppercase;letter-spacing:.02em}
 
 /* features rows */
 .feat-wm{font-size:clamp(64px,17vw,230px);text-align:center;margin-bottom:-6px}
@@ -341,7 +341,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .grow{position:relative;background:var(--dk);color:#fff;border-radius:36px;padding:170px 20px 34px;text-align:center;margin-top:110px}
 .grow .cut{position:absolute;left:50%;top:-1px;width:min(78vw,420px);height:min(39vw,210px);translate:-50% 0;background:#fff;border-radius:0 0 999px 999px}
 .grow .mascot2{position:absolute;left:50%;top:-110px;width:min(46vw,250px);translate:-50% 0;z-index:2}
-.grow .mascot2 svg{width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 30px rgba(28,128,242,.45))}
+.grow .mascot2 .mt{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 30px rgba(28,128,242,.45))}
 .grow .T{color:#fff}
 .grow .lead{color:#9DB5CF;margin:16px auto 22px}
 .ready{display:grid;gap:22px;margin-top:70px;align-items:start}
@@ -425,6 +425,85 @@ footer a{color:var(--g)}
 .conf{position:fixed;width:10px;height:14px;border-radius:3px;z-index:95;pointer-events:none;top:0;left:0}
 .rv{will-change:transform}
 
+
+/* ===== VISUALS ===== */
+.prog{position:fixed;left:0;top:0;right:0;height:3px;z-index:80;pointer-events:none}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,#5AA2F5,#1C80F2);transform-origin:left;transform:scaleX(0)}
+.bubs{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.bubs span{position:absolute;bottom:-40px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.95),rgba(255,255,255,.25) 60%,rgba(255,255,255,.05));box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.mascot{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.say-b{position:absolute;left:58%;top:-4%;background:#fff;color:var(--dk);font-weight:600;font-size:14px;padding:8px 14px;border-radius:18px 18px 18px 4px;box-shadow:var(--sh2);white-space:nowrap;z-index:6;opacity:0;pointer-events:none}
+.mq2{padding:26px 0 10px;overflow:hidden}
+.mq2-r{display:flex;width:max-content;gap:26px;align-items:center;white-space:nowrap}
+.mq2-r1{font-family:Mont,sans-serif;font-weight:800;font-size:clamp(28px,6.4vw,64px);letter-spacing:-.03em;color:var(--dk)}
+.mq2-r1 em{font-style:normal;color:transparent;-webkit-text-stroke:1.5px var(--b)}
+.mq2-r1 i{width:14px;height:14px;border-radius:50%;background:var(--b);display:inline-block}
+.mq2-r2{margin-top:14px;gap:10px}
+.mq2-r2 span{border-radius:999px;background:var(--bg);padding:10px 18px;font-size:15px;color:var(--g);border:1px solid var(--line)}
+.mq2-r2 span b{color:var(--dk);font-weight:600;margin-right:6px}
+html:not(.gs) .mq2-r{animation:mqx 40s linear infinite}
+@keyframes mqx{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.st{background:var(--bg);border-radius:24px;padding:18px;display:grid;gap:10px;justify-items:start;position:relative;overflow:hidden}
+.st svg{width:62px;height:62px;transform:rotate(-90deg)}
+.st svg circle{fill:none;stroke-width:6}
+.st svg .bg{stroke:#fff}
+.st svg .fg{stroke:var(--b);stroke-linecap:round}
+.st b{font-family:Mont,sans-serif;font-weight:500;font-size:clamp(36px,8vw,56px);letter-spacing:-.06em;line-height:1;color:var(--dk)}
+.st span{font-size:13px;color:var(--g);line-height:1.25}
+.st .ico{position:absolute;right:14px;top:14px;font-size:26px}
+.xr{background:var(--dk);color:#fff;border-radius:36px;padding:26px 14px;overflow:hidden}
+.xr .T{color:#fff}
+.xr .lead{color:#9DB5CF}
+.xr-img{position:relative;border-radius:22px;overflow:hidden;margin-top:22px;isolation:isolate;background:#000}
+.xr-img img{width:100%;aspect-ratio:2/1;object-fit:cover;filter:contrast(1.12) brightness(1.02)}
+.xr-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,128,242,.55),rgba(11,39,64,.35));mix-blend-mode:color;pointer-events:none}
+.scan{position:absolute;top:0;bottom:0;left:0;width:3px;background:#9fd0ff;box-shadow:0 0 18px 6px rgba(90,162,245,.7);z-index:2;pointer-events:none}
+.scan::after{content:"";position:absolute;top:0;bottom:0;right:3px;width:80px;background:linear-gradient(90deg,transparent,rgba(90,162,245,.25))}
+.hs{position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;border:0;background:#fff;cursor:pointer;z-index:3;display:grid;place-items:center;padding:0;box-shadow:0 0 0 4px rgba(28,128,242,.55)}
+.hs::before{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid #fff;animation:ring 1.8s ease-out infinite;opacity:0}
+@keyframes ring{0%{scale:.6;opacity:.9}100%{scale:1.8;opacity:0}}
+.hs i{width:6px;height:6px;border-radius:50%;background:var(--b)}
+.hs.on{background:var(--b)}
+.hs.on i{background:#fff}
+.xr-info{margin-top:14px;background:rgba(255,255,255,.07);border-radius:20px;padding:16px;display:flex;gap:12px;align-items:center;min-height:92px}
+.xr-info b{font-size:22px;font-weight:600;display:block}
+.xr-info small{color:#9DB5CF;font-size:14px;display:block}
+.xr-info p{margin:4px 0 0;color:#CFDDEC;font-size:14.5px}
+.xr-info .pl{width:46px;height:46px;background:#fff;color:var(--dk)}
+.pulse{position:relative;width:88px;height:88px;flex:none;display:grid;place-items:center;--pc:#1C80F2}
+.pulse .rg{position:absolute;inset:12px;border-radius:50%;border:3px solid var(--pc);opacity:0}
+.pulse svg{width:46px;height:auto;position:relative;z-index:2;overflow:visible}
+.pulse .bolt{position:absolute;z-index:3;font-size:22px;opacity:0}
+.pulse .b1{left:6px;top:8px}.pulse .b2{right:4px;top:22px}.pulse .b3{left:18px;bottom:6px}
+.meter-top{display:flex;align-items:center;gap:8px}
+.brush{background:linear-gradient(180deg,#EAF2FB,#fff);border-radius:36px;padding:26px 16px;overflow:hidden}
+.brush-g{display:grid;gap:22px;align-items:center}
+.brush svg.sc2{width:100%;max-width:520px;height:auto;display:block;margin:0 auto;overflow:visible}
+.clean{display:flex;align-items:center;gap:12px;margin-top:6px}
+.clean b{font-family:Mont,sans-serif;font-weight:500;font-size:44px;letter-spacing:-.06em;color:var(--b);min-width:3ch}
+.clean span{font-size:13px;color:var(--g);line-height:1.2}
+.bw{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.typing{display:flex;gap:4px;background:#fff;border-radius:18px 18px 18px 6px;padding:12px 14px;width:max-content;box-shadow:0 4px 12px -8px rgba(11,39,64,.4)}
+.typing.p{margin-left:auto;background:var(--b);border-radius:18px 18px 6px 18px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--g2);animation:tp 1s infinite}
+.typing.p i{background:#fff}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes tp{0%,60%,100%{translate:0 0;opacity:.5}30%{translate:0 -4px;opacity:1}}
+.rthumb{width:100%;aspect-ratio:16/8;object-fit:cover;border-radius:18px}
+.rprev{position:fixed;left:0;top:0;width:260px;aspect-ratio:4/3;border-radius:22px;overflow:hidden;pointer-events:none;z-index:40;opacity:0;scale:.6;box-shadow:var(--sh);display:none}
+.rprev img{width:100%;height:100%;object-fit:cover}
+@media (hover:hover) and (min-width:900px){.rprev{display:block}.row .rthumb{display:none}}
+@media (min-width:560px){.stats{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:900px){
+  .pulse{width:120px;height:120px}.pulse svg{width:64px}.pulse .rg{inset:18px}.scale{font-size:11px;letter-spacing:.06em}.meter-n span strong{font-size:20px}
+  .hs{width:26px;height:26px;margin:-13px 0 0 -13px}
+  .xr{padding:56px}
+  .xr-g{display:grid;grid-template-columns:.9fr 1.6fr;gap:44px;align-items:center}
+  .xr-img{margin-top:0}
+  .brush{padding:56px}
+  .brush-g{grid-template-columns:1.2fr 1fr;gap:50px}
+}
 @media (min-width:560px){
   .cards3{grid-template-columns:1fr 1fr}
   .cmd-g{grid-template-columns:repeat(3,1fr)}
@@ -512,21 +591,23 @@ footer a{color:var(--g)}
 </symbol>
 </svg>
 
+<div class="prog"><i id="progI"></i></div>
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="logo" href="#top"><svg><use href="#tooth-logo"/></svg>ALTERNA</a>
-    <nav class="nav-l"><a href="#call">Звонок</a><a href="#map">Где болит</a><a href="#tedavi">Процедуры</a><a href="#chair">В кресле</a><a href="#check">Тест</a></nav>
+    <nav class="nav-l"><a href="#call">Звонок</a><a href="#map">Где болит</a><a href="#xray">Рентген</a><a href="#tedavi">Процедуры</a><a href="#chair">В кресле</a><a href="#check">Тест</a></nav>
     <a class="btn btn-b" href="https://app.lava.top/products/2cdbb9f8-e65b-443e-8d2c-4fea4c121e41" target="_blank" rel="noopener">Купить · €30 <svg><use href="#i-right"/></svg></a>
   </div>
 </header>
 
 <main id="top">
 <section class="hero" id="hero">
+  <div class="bubs" id="bubs"></div>
   <div class="wm" id="heroWm">DİŞÇİ</div>
   <div class="wrap">
     <div class="hero-stage" id="stage">
       <svg class="hlines" id="hlines"></svg>
-      <div class="mascot" id="mascot"><svg viewBox="0 0 200 230"><use href="#tooth"/></svg></div>
+      <div class="mascot" id="mascot" role="button" tabindex="0" aria-label="Зуб говорит merhaba"><span class="say-b" id="sayB">Merhaba! 👋</span><svg viewBox="0 0 200 230" class="mt" aria-hidden="true"><ellipse class="m-sh" cx="100" cy="222" rx="62" ry="8" fill="url(#tg3)"/><g class="m-body"><path d="M100 26C78 14 40 14 30 50c-9 32 6 54 14 80 7 24 6 72 24 76 19 4 18-52 32-52s13 56 32 52c18-4 17-52 24-76 8-26 23-48 14-80-10-36-48-36-70-24Z" fill="url(#tg1)" stroke="#8DB8E8" stroke-width="2.5"/><path d="M52 40c10-12 30-12 40-4" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none" opacity=".9"/><g class="m-eyes"><g class="m-eye"><ellipse cx="76" cy="92" rx="11" ry="14" fill="#0B2740"/><circle cx="80" cy="87" r="4.5" fill="#fff"/><circle cx="73" cy="98" r="2" fill="#5AA2F5"/></g><g class="m-eye"><ellipse cx="124" cy="92" rx="11" ry="14" fill="#0B2740"/><circle cx="128" cy="87" r="4.5" fill="#fff"/><circle cx="121" cy="98" r="2" fill="#5AA2F5"/></g></g><g class="m-cheek"><ellipse cx="60" cy="112" rx="9" ry="5" fill="#FFB3C1" opacity=".7"/><ellipse cx="140" cy="112" rx="9" ry="5" fill="#FFB3C1" opacity=".7"/></g><path class="m-mouth" d="M86 114c8 10 20 10 28 0" stroke="#0B2740" stroke-width="4.5" stroke-linecap="round" fill="#0B2740" fill-opacity="0"/></g><g class="m-sp"><path d="M164 30l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#fff"/><path d="M26 150l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#fff" opacity=".9"/><path d="M178 120l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z" fill="#fff" opacity=".8"/></g></svg></div>
       <span class="target" id="target"></span>
       <div class="hcard hc-1" id="hc1"><img src="media/photos/mirror.webp" alt="Стоматолог осматривает пациента"><p>Записаться, объяснить <span>где болит, понять врача и</span> заплатить</p></div>
       <div class="hcard hc-2" id="hc2"><span class="avs"><i>🦷</i><i>😬</i><i>🪥</i></span><span><b>60+</b><small>фраз с озвучкой</small></span></div>
@@ -549,6 +630,10 @@ footer a{color:var(--g)}
   </div>
 </section>
 
+<section class="mq2" aria-hidden="true">
+  <div class="mq2-r mq2-r1" id="mqA"><span>DİŞİM AĞRIYOR</span><i></i><em>AĞZINIZI AÇIN</em><i></i><span>GEÇMİŞ OLSUN</span><i></i><em>RANDEVU</em><i></i><span>ACIYOR!</span><i></i><em>DOLGU</em><i></i><span>DİŞİM AĞRIYOR</span><i></i><em>AĞZINIZI AÇIN</em><i></i><span>GEÇMİŞ OLSUN</span><i></i><em>RANDEVU</em><i></i><span>ACIYOR!</span><i></i><em>DOLGU</em><i></i></div>
+  <div class="mq2-r mq2-r2" id="mqB"><span><b>dolgu</b>пломба</span><span><b>acil</b>срочно</span><span><b>diş eti</b>десна</span><span><b>uyuşacak</b>онемеет</span><span><b>tükürün</b>сплюньте</span><span><b>ağrı kesici</b>обезболивающее</span><span><b>randevu</b>запись</span><span><b>röntgen</b>снимок</span><span><b>dolgu</b>пломба</span><span><b>acil</b>срочно</span><span><b>diş eti</b>десна</span><span><b>uyuşacak</b>онемеет</span><span><b>tükürün</b>сплюньте</span><span><b>ağrı kesici</b>обезболивающее</span><span><b>randevu</b>запись</span><span><b>röntgen</b>снимок</span></div>
+</section>
 <section class="sec">
   <div class="wrap">
     <div class="story" id="story">
@@ -563,6 +648,9 @@ footer a{color:var(--g)}
   </div>
 </section>
 
+<section style="padding:0 0 20px">
+  <div class="wrap"><div class="stats" id="stats"></div></div>
+</section>
 <section class="sec" style="padding-top:10px">
   <div class="wrap">
     <div class="sit-top">
@@ -624,6 +712,23 @@ footer a{color:var(--g)}
   </div>
 </section>
 
+<section class="sec" id="xray" style="padding-top:20px">
+  <div class="wrap">
+    <div class="xr">
+      <div class="xr-g">
+        <div>
+          <span class="eye" style="color:#5AA2F5">Röntgen</span>
+          <h2 class="T t-l">Врач показывает снимок. <span class="lt">Ты видишь облако</span></h2>
+          <p class="lead">Он говорит быстро и тычет ручкой. Я киваю. Нажми на точки — расскажу, что там на самом деле.</p>
+        </div>
+        <div>
+          <div class="xr-img" id="xrImg"><img src="media/photos/pano.webp" alt="Панорамный рентгеновский снимок зубов" loading="lazy"><span class="scan" id="scan"></span></div>
+          <div class="xr-info" id="xrInfo"><button class="pl" id="xrPl" aria-label="Послушать"><svg><use href="#i-play"/></svg></button><div><b id="xrW">dolgu</b><small id="xrR">пломба</small><p id="xrT">Белые пятна — это пломбы. Металл на снимке светится ярче всего.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="sec" style="padding-top:10px">
   <div class="wrap">
     <div class="pain rv">
@@ -633,7 +738,7 @@ footer a{color:var(--g)}
           <h2 class="T t-l">Сколько из десяти?</h2>
           <p class="lead">Двигай ползунок и отмечай, что чувствуешь. Фраза соберётся сама — бери и говори.</p>
           <div class="meter" style="margin-top:22px">
-            <div class="meter-n"><b id="pN">7</b><span><strong id="pW">şiddetli</strong><em style="font-style:normal" id="pR">сильная боль</em></span></div>
+            <div class="meter-n"><span class="pulse" id="pulse"><i class="rg"></i><i class="rg"></i><i class="rg"></i><svg viewBox="0 0 200 230"><use href="#tooth"/></svg><span class="bolt b1">⚡</span><span class="bolt b2">⚡</span><span class="bolt b3">⚡</span></span><b id="pN">7</b><span><strong id="pW">şiddetli</strong><em style="font-style:normal" id="pR">сильная боль</em></span></div>
             <input type="range" id="pain" min="0" max="10" value="7" aria-label="Сила боли">
             <div class="scale"><span>yok</span><span>hafif</span><span>orta</span><span>şiddetli</span><span>dayanılmaz</span></div>
           </div>
@@ -711,6 +816,32 @@ footer a{color:var(--g)}
   </div>
 </section>
 
+<section class="sec" id="brush" style="padding-top:20px">
+  <div class="wrap">
+    <div class="brush">
+      <div class="brush-g">
+        <div id="brushWrap">
+          <svg class="sc2" id="brushSvg" viewBox="0 0 420 320" aria-label="Анимация: щётка чистит зуб">
+            <ellipse cx="210" cy="300" rx="110" ry="10" fill="url(#tg3)"/>
+            <g transform="translate(110 40)"><path d="M100 26C78 14 40 14 30 50c-9 32 6 54 14 80 7 24 6 72 24 76 19 4 18-52 32-52s13 56 32 52c18-4 17-52 24-76 8-26 23-48 14-80-10-36-48-36-70-24Z" fill="url(#tg1)" stroke="#8DB8E8" stroke-width="2.5"/>
+              <g id="stains" fill="#C9A66B"><ellipse cx="62" cy="60" rx="14" ry="9" opacity=".7"/><ellipse cx="120" cy="52" rx="11" ry="8" opacity=".6"/><ellipse cx="150" cy="86" rx="13" ry="10" opacity=".7"/><ellipse cx="88" cy="96" rx="10" ry="7" opacity=".55"/><ellipse cx="52" cy="112" rx="9" ry="7" opacity=".6"/><ellipse cx="128" cy="122" rx="12" ry="8" opacity=".65"/><circle cx="98" cy="70" r="5" opacity=".5"/><circle cx="140" cy="140" r="5" opacity=".5"/></g>
+              <g id="foam" fill="#fff" stroke="#BBD3E9" stroke-width="1.5"><circle cx="70" cy="70" r="7"/><circle cx="96" cy="58" r="10"/><circle cx="130" cy="74" r="8"/><circle cx="112" cy="100" r="6"/><circle cx="62" cy="104" r="9"/><circle cx="146" cy="110" r="7"/><circle cx="84" cy="124" r="6"/></g>
+              <g id="happy" opacity="0"><ellipse cx="76" cy="92" rx="9" ry="11" fill="#0B2740"/><ellipse cx="124" cy="92" rx="9" ry="11" fill="#0B2740"/><circle cx="79" cy="88" r="3.5" fill="#fff"/><circle cx="127" cy="88" r="3.5" fill="#fff"/><path d="M86 112c8 10 20 10 28 0" stroke="#0B2740" stroke-width="4.5" stroke-linecap="round" fill="none"/><path d="M168 20l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#1C80F2"/><path d="M10 140l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#5AA2F5"/><path d="M180 150l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#1C80F2"/></g>
+            </g>
+            <g id="tbrush" transform="translate(250 70)"><g transform="rotate(-24)"><rect x="0" y="0" width="190" height="26" rx="13" fill="#1C80F2"/><rect x="120" y="5" width="56" height="16" rx="8" fill="#5AA2F5"/><rect x="-62" y="-4" width="70" height="34" rx="10" fill="#fff" stroke="#BBD3E9" stroke-width="2"/><g stroke="#5AA2F5" stroke-width="4" stroke-linecap="round"><path d="M-54 30v16M-44 30v18M-34 30v16M-24 30v18M-14 30v16M-4 30v18"/></g></g></g>
+          </svg>
+        </div>
+        <div>
+          <span class="eye">После врача</span>
+          <h2 class="T t-l">Прокрути — <span class="lt">почисти зуб</span></h2>
+          <p class="lead">Врач спросил, <b>günde kaç kez fırçalıyorsunuz?</b> Я сказал, iki. Он посмотрел на мои зубы. Я сказал, bir.</p>
+          <div class="clean"><b id="cleanN">0%</b><span>чистоты<br>по мере прокрутки</span></div>
+          <div class="bw" id="bw"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="sec" style="padding-top:20px">
   <div class="wrap">
     <div class="end">
@@ -729,7 +860,7 @@ footer a{color:var(--g)}
   <div class="wrap">
     <div class="grow rv">
       <div class="cut"></div>
-      <div class="mascot2"><svg viewBox="0 0 200 230"><use href="#tooth"/></svg></div>
+      <div class="mascot2" id="mascot2"><svg viewBox="0 0 200 230" class="mt" aria-hidden="true"><ellipse class="m-sh" cx="100" cy="222" rx="62" ry="8" fill="url(#tg3)"/><g class="m-body"><path d="M100 26C78 14 40 14 30 50c-9 32 6 54 14 80 7 24 6 72 24 76 19 4 18-52 32-52s13 56 32 52c18-4 17-52 24-76 8-26 23-48 14-80-10-36-48-36-70-24Z" fill="url(#tg1)" stroke="#8DB8E8" stroke-width="2.5"/><path d="M52 40c10-12 30-12 40-4" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none" opacity=".9"/><g class="m-eyes"><g class="m-eye"><ellipse cx="76" cy="92" rx="11" ry="14" fill="#0B2740"/><circle cx="80" cy="87" r="4.5" fill="#fff"/><circle cx="73" cy="98" r="2" fill="#5AA2F5"/></g><g class="m-eye"><ellipse cx="124" cy="92" rx="11" ry="14" fill="#0B2740"/><circle cx="128" cy="87" r="4.5" fill="#fff"/><circle cx="121" cy="98" r="2" fill="#5AA2F5"/></g></g><g class="m-cheek"><ellipse cx="60" cy="112" rx="9" ry="5" fill="#FFB3C1" opacity=".7"/><ellipse cx="140" cy="112" rx="9" ry="5" fill="#FFB3C1" opacity=".7"/></g><path class="m-mouth" d="M86 114c8 10 20 10 28 0" stroke="#0B2740" stroke-width="4.5" stroke-linecap="round" fill="#0B2740" fill-opacity="0"/></g><g class="m-sp"><path d="M164 30l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#fff"/><path d="M26 150l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#fff" opacity=".9"/><path d="M178 120l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z" fill="#fff" opacity=".8"/></g></svg></div>
       <h2 class="T t-l">Зуб не ждёт, <span class="lt">пока ты дойдёшь до B1</span></h2>
       <p class="lead">Он болит, когда хочет. Аптека, скорая, страховая, запись по телефону тоже не спрашивают, какой у тебя уровень. Лучше выучить до, чем искать переводчика в 23:40.</p>
       <a class="btn btn-ow" href="https://app.lava.top/products/2cdbb9f8-e65b-443e-8d2c-4fea4c121e41" target="_blank" rel="noopener">Открыть Alterna <svg><use href="#i-right"/></svg></a>
@@ -997,7 +1128,7 @@ function xInit(){
     $$('.split').forEach(function(h){var st=new SplitText(h,{type:'words',wordsClass:'w'});gsap.from(st.words,{yPercent:70,rotation:3,duration:.9,ease:'back.out(1.6)',stagger:.04,scrollTrigger:h.closest('.hero')?null:{trigger:h,start:'top 88%',once:true}})});
   }
   gsap.from('#mascot',{y:80,scale:.7,rotation:-10,duration:1.4,ease:'elastic.out(1,.6)',delay:.2});
-  gsap.to('#mascot svg',{y:-16,rotation:3,duration:2.6,yoyo:true,repeat:-1,ease:'sine.inOut',delay:1.4});
+  gsap.to('#mascot .mt',{y:-16,rotation:3,duration:2.6,yoyo:true,repeat:-1,ease:'sine.inOut',delay:1.4});
   gsap.from('#hc1',{x:-60,rotation:-6,duration:1,ease:'back.out(1.6)',delay:.5});
   gsap.from('#card3',{x:60,rotation:8,duration:1,ease:'back.out(1.6)',delay:.65});
   gsap.from('#hc2',{scale:.4,duration:.7,ease:'back.out(2.5)',delay:.9});
@@ -1014,13 +1145,12 @@ function xInit(){
   var sws=$$('.scrub .sw');ScrollTrigger.create({trigger:'#story',start:'top 75%',end:'bottom 50%',scrub:true,onUpdate:function(s){var n=Math.round(s.progress*sws.length);for(var i=0;i<sws.length;i++)sws[i].style.color=i<n?'#0B2740':''}});
   gsap.from('.fchip',{scale:.4,stagger:.15,duration:.6,ease:'back.out(2.5)',scrollTrigger:{trigger:'.sit-photo',start:'top 75%',once:true}});
   gsap.to('.fc-2',{y:-10,duration:2.4,yoyo:true,repeat:-1,ease:'sine.inOut'});
-  ScrollTrigger.create({trigger:'#lines',start:'top 85%',once:true,onEnter:function(){gsap.from('.ln',{y:24,scale:.9,stagger:.18,duration:.5,ease:'back.out(2)'})}});
-  ScrollTrigger.create({trigger:'#jawSvg',start:'top 80%',once:true,onEnter:function(){gsap.from('.tooth',{scale:0.3,transformOrigin:'50% 50%',stagger:{each:.02,from:'center'},duration:.5,ease:'back.out(3)'})}});
+  ScrollTrigger.create({trigger:'.jaw',start:'top 80%',once:true,onEnter:function(){gsap.from('.tooth',{scale:0.3,transformOrigin:'50% 50%',stagger:{each:.02,from:'center'},duration:.5,ease:'back.out(3)'})}});
   ScrollTrigger.batch('.row',{start:'top 92%',once:true,onEnter:function(b){gsap.from(b,{x:-40,duration:.6,stagger:.06,ease:'power3.out'})}});
   gsap.from('.feat-wm',{yPercent:30,opacity:0,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:'.feat-wm',start:'top 85%',once:true}});
   ScrollTrigger.batch('.gc',{start:'top 92%',once:true,onEnter:function(b){gsap.from(b,{y:40,rotation:1.5,duration:.7,stagger:.07,ease:'back.out(1.6)'})}});
   gsap.from('.grow .mascot2',{y:60,scale:.6,rotation:-12,duration:1.3,ease:'elastic.out(1,.55)',scrollTrigger:{trigger:'.grow',start:'top 80%',once:true}});
-  gsap.to('.grow .mascot2 svg',{y:-12,duration:2.4,yoyo:true,repeat:-1,ease:'sine.inOut'});
+  gsap.to('.grow .mascot2 .mt',{y:-12,duration:2.4,yoyo:true,repeat:-1,ease:'sine.inOut'});
   $$('.fe b').forEach(function(b){var n=+b.dataset.n,o={v:0};ScrollTrigger.create({trigger:b,start:'top 92%',once:true,onEnter:function(){gsap.to(o,{v:n,duration:n>500?1.8:1.1,ease:'power2.out',onUpdate:function(){b.textContent=Math.round(o.v)}})}})});
   gsap.from('.lap-scr',{rotationX:-55,transformOrigin:'50% 100%',transformPerspective:1200,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:'.lap',start:'top 85%',once:true}});
   ScrollTrigger.batch('.slide',{start:'top 95%',once:true,onEnter:function(b){gsap.from(b,{y:60,rotation:4,duration:.8,stagger:.06,ease:'back.out(1.5)'})}});
@@ -1032,5 +1162,100 @@ function xInit(){
 }
 document.addEventListener('DOMContentLoaded',xInit);
 </script>
+<script>
+var XR=[['dolgu',40,41,'пломба','Белые пятна — это пломбы. Металл на снимке светится ярче всего.'],['eksik diş',34,40,'нет зуба','Тёмный промежуток — тут зуба нет. Врач скажет «burada diş eksik».'],['azı dişi',28,52,'коренной зуб','Большие, с двумя корнями. Жуют всё. И болят тоже за всех.'],['kesici dişler',50,60,'резцы','Передние. Узкие, с одним корнем. На снимке — ровный ряд в центре.'],['kök',56,67,'корень','Kök — корень. Kanal tedavisi лечит как раз его.'],['çene kemiği',50,83,'челюстная кость','Подкова внизу — нижняя челюсть. Для импланта смотрят именно её.'],['R · sağ',6,88,'правая сторона','R — правая сторона пациента. Снимок тоже «как у врача»: твоя правая слева.']];
+var STATS=[[32,'зуба на карте','🦷',''],[10,'процедур с фразами','🩺',''],[60,'фраз с озвучкой','🔊','+'],[8,'ситуаций в «Больнице»','🏥','']];
+var BW=[['diş fırçası','зубная щётка'],['diş macunu','зубная паста'],['diş ipi','зубная нить'],['ağız gargarası','ополаскиватель'],['fırçalamak','чистить щёткой'],['günde iki kez','два раза в день']];
+var TIMG=['mirror','pano','brush','xrays','xrays','navy','chair','room','mirror','brush'];
+function xVis(){
+  var G=document.documentElement.classList.contains('gs')?window.gsap:null;
+  var hover=window.matchMedia('(hover:hover)').matches;
+  /* progress */
+  var pi=$('#progI'),tk=false;function pr(){tk=false;var h=document.documentElement.scrollHeight-innerHeight;pi.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0)+')'}
+  window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(pr)}},{passive:true});pr();
+  /* stats */
+  var st=$('#stats');STATS.forEach(function(x){st.appendChild(el('<div class="st rv"><span class="ico">'+x[2]+'</span><svg viewBox="0 0 70 70"><circle class="bg" cx="35" cy="35" r="29"/><circle class="fg" cx="35" cy="35" r="29" stroke-dasharray="182.2" stroke-dashoffset="'+(G?182.2:0)+'"/></svg><b data-n="'+x[0]+'" data-s="'+x[3]+'">'+x[0]+x[3]+'</b><span>'+esc(x[1])+'</span></div>'))});
+  /* xray */
+  var xi=$('#xrImg');XR.forEach(function(h,i){var b=el('<button class="hs'+(i?'':' on')+'" style="left:'+h[1]+'%;top:'+h[2]+'%" data-i="'+i+'" aria-label="'+esc(h[0])+'"><i></i></button>');xi.appendChild(b)});
+  function xs(i){var h=XR[i];$$('.hs').forEach(function(b){b.classList.toggle('on',+b.dataset.i===i)});$('#xrW').textContent=h[0];$('#xrR').textContent=h[3];$('#xrT').textContent=h[4];$('#xrPl').dataset.say=h[0].replace(' · sağ','').replace('R','sağ');if(G)gsap.fromTo('#xrInfo',{y:10},{y:0,duration:.4,ease:'back.out(3)'})}
+  xi.addEventListener('click',function(e){var b=e.target.closest('.hs');if(b){xs(+b.dataset.i);say($('#xrPl').dataset.say)}});xs(0);
+  /* brush words */
+  var bw=$('#bw');BW.forEach(function(w){bw.appendChild(el('<button class="dw" data-say="'+esc(w[0])+'"><b>'+esc(w[0])+'<svg><use href="#i-play"/></svg></b><small>'+esc(w[1])+'</small></button>'))});
+  /* procedure thumbs + preview */
+  $$('#rows .row').forEach(function(r,i){var inn=r.querySelector('.in');inn.insertBefore(el('<img class="rthumb" src="media/photos/'+TIMG[i]+'.webp" alt="" loading="lazy">'),inn.firstChild);r.dataset.img=TIMG[i]});
+  /* mascot click */
+  function hello(m){say('Merhaba! Ben Diş.');if(!G)return;var mo=m.querySelector('.m-mouth');gsap.timeline().to(m.querySelector('.mt'),{y:-40,scaleY:1.06,duration:.3,ease:'power2.out'}).to(m.querySelector('.mt'),{y:0,scaleY:1,duration:.7,ease:'bounce.out'});gsap.timeline().to(mo,{attr:{d:'M86 112c8 18 20 18 28 0'},fillOpacity:1,duration:.2}).to(mo,{attr:{d:'M86 114c8 10 20 10 28 0'},fillOpacity:0,duration:.3,delay:.9});var sb=m.querySelector('.say-b');if(sb)gsap.fromTo(sb,{opacity:0,y:10,scale:.6},{opacity:1,y:0,scale:1,duration:.4,ease:'back.out(3)',onComplete:function(){gsap.to(sb,{opacity:0,y:-8,delay:1.6,duration:.3})}})}
+  [$('#mascot'),$('#mascot2')].forEach(function(m){if(!m)return;m.addEventListener('click',function(){hello(m)});m.addEventListener('keydown',function(e){if(e.key==='Enter')hello(m)})});
+  if(!G){$('#cleanN').textContent='100%';var st0=$('#stains'),fo=$('#foam'),hp=$('#happy');st0.style.opacity=0;fo.style.opacity=0;hp.setAttribute('opacity',1);return}
+
+  /* blink + eyes follow */
+  $$('.mt').forEach(function(svg){var eyes=svg.querySelectorAll('.m-eye');(function blink(){gsap.to(eyes,{scaleY:.1,transformOrigin:'50% 50%',duration:.07,yoyo:true,repeat:1,delay:gsap.utils.random(1.8,4.5),onComplete:blink})})();
+    var eg=svg.querySelector('.m-eyes'),qx=gsap.quickTo(eg,'x',{duration:.4,ease:'power3'}),qy=gsap.quickTo(eg,'y',{duration:.4,ease:'power3'});
+    window.addEventListener('pointermove',function(e){var r=svg.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;var dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height*.4),d=Math.max(1,Math.hypot(dx,dy));qx(dx/d*6);qy(dy/d*5)},{passive:true});
+    gsap.to(svg.querySelectorAll('.m-sp path'),{scale:.3,opacity:.2,transformOrigin:'50% 50%',duration:.9,yoyo:true,repeat:-1,stagger:.35,ease:'sine.inOut'});
+  });
+  if(!hover){/* gentle look-around on touch */$$('.m-eyes').forEach(function(eg){gsap.to(eg,{x:5,duration:1.4,yoyo:true,repeat:-1,repeatDelay:1.2,ease:'sine.inOut'})})}
+
+  /* bubbles */
+  var bubs=$('#bubs'),btl=[];for(var i=0;i<16;i++){var sz=gsap.utils.random(8,34);var sp=document.createElement('span');sp.style.width=sp.style.height=sz+'px';sp.style.left=gsap.utils.random(2,96)+'%';bubs.appendChild(sp);var bt=gsap.to(sp,{y:-(bubs.offsetHeight+80),x:gsap.utils.random(-40,40),duration:gsap.utils.random(8,15),repeat:-1,ease:'none'});bt.progress(Math.random());btl.push(bt)}
+  ScrollTrigger.create({trigger:'#hero',start:'top top',end:'bottom top',onLeave:function(){btl.forEach(function(t){t.pause()})},onEnterBack:function(){btl.forEach(function(t){t.play()})}});
+
+  /* marquee */
+  var mA=gsap.fromTo('#mqA',{xPercent:0},{xPercent:-50,repeat:-1,ease:'none',duration:28}),mB=gsap.fromTo('#mqB',{xPercent:-50},{xPercent:0,repeat:-1,ease:'none',duration:34});
+  var sk=gsap.quickTo('#mqA','skewX',{duration:.4,ease:'power3'});
+  ScrollTrigger.create({trigger:'.mq2',start:'top bottom',end:'bottom top',onUpdate:function(s){var v=s.getVelocity(),f=1+Math.min(Math.abs(v)/400,5);mA.timeScale(f*(v<0?-1:1));mB.timeScale(f*(v<0?-1:1));sk(gsap.utils.clamp(-12,12,-v/120));gsap.delayedCall(.25,function(){mA.timeScale(1);mB.timeScale(1);sk(0)})},onToggle:function(s){if(s.isActive){mA.play();mB.play()}else{mA.pause();mB.pause()}}});
+
+  /* stats */
+  $$('.st').forEach(function(c){var b=c.querySelector('b'),n=+b.dataset.n,sfx=b.dataset.s,o={v:0},fg=c.querySelector('.fg');ScrollTrigger.create({trigger:c,start:'top 90%',once:true,onEnter:function(){gsap.to(o,{v:n,duration:1.3,ease:'power2.out',onUpdate:function(){b.textContent=Math.round(o.v)+sfx}});gsap.to(fg,{attr:{'stroke-dashoffset':0},duration:1.4,ease:'power2.out'});gsap.from(c.querySelector('.ico'),{scale:0,rotation:-90,duration:.7,ease:'back.out(3)',delay:.3})}})});
+
+  /* xray */
+  var scan=$('#scan');var stl=gsap.fromTo(scan,{left:'0%'},{left:'100%',duration:3.2,ease:'sine.inOut',yoyo:true,repeat:-1,paused:true});
+  ScrollTrigger.create({trigger:'#xrImg',start:'top bottom',end:'bottom top',onToggle:function(s){s.isActive?stl.play():stl.pause()}});
+  ScrollTrigger.create({trigger:'#xrImg',start:'top 75%',once:true,onEnter:function(){gsap.from('.hs',{scale:0,duration:.5,stagger:.12,ease:'back.out(3)',delay:.4});gsap.from('#xrImg img',{scale:1.15,filter:'brightness(.2) contrast(1.12)',duration:1.6,ease:'power2.out'})}});
+
+  /* pain pulse */
+  var pulse=$('#pulse'),rgs=pulse.querySelectorAll('.rg'),ptl=gsap.timeline({repeat:-1});
+  rgs.forEach(function(r,i){ptl.fromTo(r,{scale:.7,opacity:.8},{scale:1.9,opacity:0,duration:1.6,ease:'power1.out'},i*.53)});
+  var tsv=pulse.querySelector('svg'),shake=gsap.to(tsv,{x:2,rotation:2,duration:.06,yoyo:true,repeat:-1,paused:true});
+  function pp(){var n=+$('#pain').value;ptl.timeScale(.5+n*.28);pulse.style.setProperty('--pc',n>=8?'#FF5A5F':n>=5?'#5AA2F5':'#1C80F2');gsap.to(pulse.querySelectorAll('.bolt'),{opacity:n>=7?1:0,scale:n>=7?1:.4,duration:.3,stagger:.05});if(n>=9)shake.play();else{shake.pause();gsap.set(tsv,{x:0,rotation:0})}}
+  $('#pain').addEventListener('input',pp);pp();
+  ScrollTrigger.create({trigger:pulse,start:'top bottom',end:'bottom top',onToggle:function(s){s.isActive?ptl.play():ptl.pause()}});
+  gsap.to(pulse.querySelectorAll('.bolt'),{y:-4,duration:.3,yoyo:true,repeat:-1,ease:'sine.inOut',stagger:.1});
+
+  /* chat typing */
+  var lns=$$('#lines .ln'),lw=$('#lines');gsap.set(lns,{autoAlpha:0,y:14});
+  var typing=el('<div class="typing"><i></i><i></i><i></i></div>');
+  ScrollTrigger.create({trigger:'#lines',start:'top 80%',once:true,onEnter:function(){var tl=gsap.timeline();lns.forEach(function(l,i){tl.add(function(){typing.className='typing'+(l.classList.contains('p')?' p':'');lw.insertBefore(typing,l)});tl.fromTo(typing,{autoAlpha:0,scale:.6},{autoAlpha:1,scale:1,duration:.2});tl.to({},{duration:.55});tl.add(function(){typing.remove()});tl.to(l,{autoAlpha:1,y:0,duration:.35,ease:'back.out(2)'})});tl.add(function(){typing.remove();ScrollTrigger.refresh()})}});
+
+  /* brushing scrub */
+  var br=$('#tbrush'),stn=$$('#stains > *'),fm=$$('#foam > *'),cn=$('#cleanN');
+  gsap.set(fm,{scale:0,transformOrigin:'50% 50%'});
+  var btl2=gsap.timeline({scrollTrigger:{trigger:'#brushWrap',start:'top 75%',end:'bottom 25%',scrub:.6,onUpdate:function(s){cn.textContent=Math.round(s.progress*100)+'%'}}});
+  for(var k=0;k<6;k++){btl2.to(br,{x:k%2?285:150,y:k%2?62:84,duration:1,ease:'sine.inOut'},k)}
+  btl2.to(fm,{scale:1,duration:1.2,stagger:.25,ease:'back.out(2)'},0.3);
+  btl2.to(stn,{opacity:0,scale:.4,transformOrigin:'50% 50%',duration:2,stagger:.35},0.6);
+  btl2.to(fm,{scale:0,opacity:0,duration:.8,stagger:.15},4.6);
+  btl2.to(br,{x:430,y:10,rotation:10,duration:1,ease:'power2.in'},6);
+  btl2.to('#happy',{attr:{opacity:1},duration:.6},6.2);
+  btl2.from('#happy path',{scale:0,transformOrigin:'50% 50%',duration:.6,stagger:.1,ease:'back.out(3)'},6.3);
+
+  /* procedures cursor preview */
+  if(hover&&window.matchMedia('(min-width:900px)').matches){
+    var pv=el('<div class="rprev"><img alt=""></div>');document.body.appendChild(pv);var pimg=pv.querySelector('img');
+    var px=gsap.quickTo(pv,'x',{duration:.5,ease:'power3'}),py=gsap.quickTo(pv,'y',{duration:.5,ease:'power3'});
+    $$('#rows .row-h').forEach(function(h){h.addEventListener('pointerenter',function(){pimg.src='media/photos/'+h.parentNode.dataset.img+'.webp';gsap.to(pv,{opacity:1,scale:1,rotation:gsap.utils.random(-6,6),duration:.35,ease:'back.out(2)'})});h.addEventListener('pointerleave',function(){gsap.to(pv,{opacity:0,scale:.6,duration:.25})})});
+    window.addEventListener('pointermove',function(e){px(e.clientX+24);py(e.clientY-100)},{passive:true});
+  }
+
+  /* commands hover tilt */
+  if(hover)$$('.cm').forEach(function(c){var inn=c.querySelector('.cm-in');c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();gsap.to(c,{rotationY:((e.clientX-r.left)/r.width-.5)*16,rotationX:-((e.clientY-r.top)/r.height-.5)*16,transformPerspective:700,duration:.4})});c.addEventListener('pointerleave',function(){gsap.to(c,{rotationY:0,rotationX:0,duration:.5})})});
+
+  /* section headings underline sweep: eye labels */
+  ScrollTrigger.batch('.eye',{start:'top 92%',once:true,onEnter:function(b){gsap.from(b,{x:-20,duration:.6,stagger:.05,ease:'power3.out'})}});
+  ScrollTrigger.refresh();
+}
+document.addEventListener('DOMContentLoaded',xVis);
+</script>
+
 </body>
 </html>
